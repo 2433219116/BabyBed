@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" 支持actionbar的darkbar
+ app:layout_collapseMode="pin" toolbar永远在顶部
+ app:popupTheme="@style/ThemeOverlay.AppCompat.Light"  相关的按钮可以弹出popwindows
+-->
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:layout_gravity="center"
+    android:background="@color/colorWhite"
+    app:layout_collapseMode="pin"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    <ImageView
+        android:id="@+id/img_toolbar_left"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginRight="15dp"
+        android:layout_gravity="center_vertical|left"
+        android:src="@mipmap/ic_launcher"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/txt_toolbar_title"
+        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/colorViolet"/>
+
+
+    <ImageView
+        android:id="@+id/img_toolbar_right"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginRight="15dp"
+        android:layout_gravity="right|center_vertical"
+        android:src="@mipmap/ic_launcher"
+        android:visibility="gone"/>
+
+</android.support.v7.widget.Toolbar>
+

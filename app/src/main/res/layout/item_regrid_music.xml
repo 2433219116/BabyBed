@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="120dp"
+        android:layout_height="120dp">
+
+
+        <ImageView
+            android:id="@+id/img_music_cover"
+            android:layout_width="120dp"
+            android:scaleType="centerCrop"
+            android:layout_height="120dp"
+            android:src="@mipmap/img_portrait"/>
+
+        <LinearLayout
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@mipmap/ic_music_regrid_top"/>
+
+            <TextView
+                android:id="@+id/txt_music_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="328万"
+                style="@style/text_small"
+                android:textColor="@color/colorWhite"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:textColor="@color/colorBlack"
+        android:id="@+id/txt_music_name"
+        style="@style/text_small"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:text="歌单的名字"/>
+</LinearLayout>

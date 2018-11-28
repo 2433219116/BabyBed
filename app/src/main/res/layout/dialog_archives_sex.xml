@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/colorWhite"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:text="宝宝性别"
+            android:textColor="@color/colorViolet"
+            android:textSize="16sp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp">
+
+            <RadioGroup
+                android:id="@+id/rg_archives_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp">
+
+                <RadioButton
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/rb_archives_boy"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:background="@drawable/rb_circle_violet"
+                    android:button="@null"/>
+
+                <RadioButton
+                    android:layout_marginTop="9dp"
+                    android:id="@+id/rb_archives_girl"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:background="@drawable/rb_circle_violet"
+                    android:button="@null"/>
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/rg_archives_sex"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_archives_boy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    style="@style/text_normal"
+                    android:textColor="@color/colorBlack"
+                    android:text="男孩"/>
+
+                <TextView
+                    style="@style/text_normal"
+                    android:id="@+id/txt_archives_girl"
+                    android:textColor="@color/colorBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="女孩"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="5dp"
+            android:background="#E4E4E4"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

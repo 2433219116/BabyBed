@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <babybed.hang.efan.babybed.weight.ColorAnimationView
+        android:id="@+id/color_animation_view_guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v4.view.ViewPager>
+
+    <com.pixelcan.inkpageindicator.InkPageIndicator
+    android:id="@+id/inkpage_indicator_guide"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="60dp"
+    app:ipi_animationDuration="320"
+    app:ipi_currentPageIndicatorColor="@color/colorViolet"
+    app:ipi_dotDiameter="8dp"
+    app:ipi_dotGap="8dp"
+    app:ipi_pageIndicatorColor="@color/colorGrey"/>
+
+    <Button
+        android:id="@+id/btn_guide_to_splash"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:background="@drawable/btn_circle_violet"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:text="点击进入"
+        android:textColor="@color/colorWhite"
+        android:visibility="gone"/>
+</RelativeLayout>

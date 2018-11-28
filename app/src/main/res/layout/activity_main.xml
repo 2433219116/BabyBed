@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--
+    侧滑菜单DrawerLayout
+    在根布局之后又主要分为三大块，第一块就是我们主界面的内容，第二块是左边拉出来的布局，
+    第三块是右边拉出来的布局（不需要右边侧拉就不用写，这样的话整个布局就只分为两大块）
+    系统通过layout_gravity属性的值来判断这个布局是左边菜单的布局还是右边菜单的布局，如果没有这个属性是主界面的布局。
+    -->
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/include_toolbar"/>
+
+            <FrameLayout
+                android:id="@+id/fl_main_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <!--侧滑-->
+
+        <LinearLayout
+            android:background="@drawable/color_change"
+            android:id="@+id/ll_drawerlayout_left"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout android:id="@+id/ll_drawerlayout_header"
+                          android:layout_width="match_parent"
+                          android:layout_height="100dp"
+                          android:gravity="center"
+                          android:orientation="vertical"
+                          android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/cimg_portrait"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@mipmap/img_portrait"
+                    app:border_color="@color/colorWhite"
+                    app:border_width="2dp"/>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/regrid_drawerlayout_footer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+    </android.support.v4.widget.DrawerLayout>
+
+</RelativeLayout>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_bed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@mipmap/img_bed"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <!--<TextView-->
+                        <!--style="@style/text_large"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!---->
+                        <!--android:text="宝"-->
+                        <!--android:textColor="@color/colorWhite"/>-->
+
+                    <TextView
+                        style="@style/text_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="50dp"
+                        android:text="宝宝体征正常，点击刷新数据>>"
+                        android:textColor="@color/colorWhite"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txt_bed_wet"
+                                style="@style/text_large_more"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="--"
+                                android:textColor="@color/colorWhite"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                style="@style/text_small"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="空气湿度"
+                                android:textColor="@color/colorWhite"/>
+                        </LinearLayout>
+
+                        <TextView
+                            style="@style/text_large_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="/"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txt_bed_temperature"
+                                style="@style/text_large_more"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="--"
+                                android:textColor="@color/colorWhite"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                style="@style/text_small"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="空气温度"
+                                android:textColor="@color/colorWhite"/>
+                        </LinearLayout>
+
+                        <TextView
+                            style="@style/text_large_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="/"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txt_bed_heart"
+                                style="@style/text_large_more"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="--"
+                                android:textColor="@color/colorWhite"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                style="@style/text_small"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="宝宝心率"
+                                android:textColor="@color/colorWhite"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/txt_break"
+                            style="@style/text_normal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/ll_circle_green"
+                            android:text="蓝牙连接"
+                            android:textColor="@color/colorBlack"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="连接状态："/>
+
+                            <TextView
+                                android:id="@+id/mTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="onMyButtonClick"
+                                android:text="未连接"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="5dp"
+                        android:src="@mipmap/ic_bluetooth"/>
+                </LinearLayout>
+
+                <include
+                    layout="@layout/include_bed_footer"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                    <!--<RelativeLayout-->
+                        <!--android:id="@+id/widget50"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:focusable="true"-->
+                        <!--android:focusableInTouchMode="true"-->
+                        <!--android:gravity="center">-->
+
+                        <!--<EditText-->
+                            <!--android:id="@+id/editText1"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="240dp"-->
+                            <!--android:layout_weight="0.68"-->
+                            <!--android:cursorVisible="false"-->
+                            <!--android:editable="false"-->
+                            <!--android:ellipsize="end"-->
+                            <!--android:inputType="textMultiLine"-->
+                            <!--android:scrollbars="vertical"/>-->
+                    <!--</RelativeLayout>-->
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>
